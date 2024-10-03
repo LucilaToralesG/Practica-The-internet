@@ -13,9 +13,13 @@ class elementsService {
         ElementsPage.getBSquare().should('have.text','A');
     };
 
-    seleccionarCheck1(opcion){
+    seleccionarCheck(opcion){
         ElementsPage.getCheckboxes().uncheck();
-        ElementsPage.getOneCheckbox().check();
+        if (opcion == 1) {
+            ElementsPage.getOneCheckbox().check();
+        }else {
+            ElementsPage.getTwoCheckbox().check();
+        }
         
     }
 
