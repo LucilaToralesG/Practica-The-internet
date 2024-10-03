@@ -18,7 +18,7 @@ describe('template spec', () => {
     ElementsService.verificarIntercambio();
   });
 
-  it.only('checkboxes', () => {
+  it('checkboxes', () => {
     HomeService.irSeccion('Checkboxes');
     cy.Validar_pagina('checkboxes',true);
     ElementsService.seleccionarCheck1();
@@ -52,7 +52,7 @@ describe('template spec', () => {
     ElementsService.seleccionarOpcion('Option 1');
   });
 
-  it('Dynamic Content', () => {
+  it.only('Dynamic Content', () => {
     HomeService.irSeccion('Dynamic Content');
     cy.Validar_pagina('dynamic_content',true);
     ElementsService.hacerContenidoEstatico();

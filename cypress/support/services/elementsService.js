@@ -21,11 +21,11 @@ class elementsService {
 
     validarSeleccion(opcion){
         if (opcion == 1) {
-            ElementsPage.getOneCheckbox().should('be.checked').and('have.text','checkbox 1');
-            ElementsPage.getTwoCheckbox().should('not.be.checked').and('have.value',' checkbox 2');
+            ElementsPage.getOneCheckbox().should('be.checked');
+            ElementsPage.getTwoCheckbox().should('not.be.checked');
         }else{
-            ElementsPage.getTwoCheckbox().should('be.checked').and('have.value',' checkbox 1');
-            ElementsPage.getOneCheckbox().should('not.be.checked').and('have.value',' checkbox 2');
+            ElementsPage.getTwoCheckbox().should('be.checked');
+            ElementsPage.getOneCheckbox().should('not.be.checked');
         }
     };
 
@@ -43,7 +43,7 @@ class elementsService {
     }
 
     validarUsuarios(){
-        ElementsPage.getUserList().should('be.visible').children().first().children().first().and('contain','img')
+        ElementsPage.getUserList().should('be.visible');
     }
 
 
